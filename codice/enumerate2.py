@@ -1,6 +1,7 @@
 import pprint
 import time
 
+# Funzione per enumerare i sottorettangoli di interesse più efficiente
 def enumerate_rect_better(matrice):
     n = len(matrice)
     m = len(matrice[0])
@@ -56,8 +57,16 @@ matrice = [
     [0, 1, 0]
 ]
 
+matrice2 = [
+    [23, 24,  25, 26, 27,  28, 29],
+    [18, 0, 19, 0, 20, 21, 22],
+    [ 11, 12,  13, 14, 15,  16, 17],
+    [ 7,  0, 8,  0, 9,  0,  10],
+    [ 1,  2,  3,  4,  5,  0,  6]
+]
+
 startT = time.time()
-n, diz = enumerate_rect_better(matrice)
+n, diz = enumerate_rect_better(matrice2)
 endT = time.time()
 print(f"Totale rettangoli: {n}")
 pprint.pprint(diz)
