@@ -36,7 +36,7 @@ def enumerate_rect_better(matrice):
                         for c_end in range(c_start, end + 1):
 
                             contatore += 1
-                            nome = f"S{contatore}"
+                            nome = f"R{contatore}"
 
                             sottomatrice = []
                             for i in range(r_start, r_end + 1):
@@ -52,9 +52,15 @@ def enumerate_rect_better(matrice):
 # prova 
 
 matrice = [
+    [6, 7, 8],
     [4, 0, 5],
-    [2, 0, 3],
-    [0, 1, 0]
+    [1, 2, 3]
+]
+
+matrice3 = [
+    [8, 9, 10, 11, 12],
+    [5, 0, 6, 0, 7],
+    [1, 2, 3, 0, 4]
 ]
 
 matrice2 = [
@@ -66,7 +72,7 @@ matrice2 = [
 ]
 
 startT = time.time()
-n, diz = enumerate_rect_better(matrice2)
+n, diz = enumerate_rect_better(matrice3)
 endT = time.time()
 print(f"Totale rettangoli: {n}")
 pprint.pprint(diz)
