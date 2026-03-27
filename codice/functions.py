@@ -39,7 +39,6 @@ def enum_rect(matrice, w, h):
     # definisco le coordinate della griglia
     X = coordinate(w)
     Y = coordinate(h)
-    #htot = Y[-1] # l'ultimo elemento corrisponde ad altezza facciata
 
     contatore = 0
     dizionario = {}
@@ -85,7 +84,7 @@ def enum_rect(matrice, w, h):
                                 sottomatrice.append(riga)
 
                             dizionario[nome] = {"coords": (x,y,width,height), 
-                                                "griglia": sottomatrice}
+                                                "celle": sottomatrice}
                 else:
                     j += 1
 
